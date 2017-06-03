@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme.AppBarOverlay"
+                    android:id="@+id/appBarLayout">
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="@color/lightBlue"
+                            app:popupTheme="@style/AppTheme.PopupOverlay" />
+                </android.support.design.widget.AppBarLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/paleBlue"
+                    android:scrollbars="vertical"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/appBarLayout" />
+                <requestFocus />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/addBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_centerHorizontal="false"
+                    android:layout_centerInParent="false"
+                    android:layout_centerVertical="false"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:src="@android:drawable/ic_input_add"
+                    android:visibility="visible"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:borderWidth="0dp"
+                    app:layout_anchor="@+id/recyclerView"
+                    app:layout_anchorGravity="bottom|right"
+                    app:rippleColor="@color/colorAccent"
+                    tools:fabSize="normal"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+        </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

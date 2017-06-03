@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:id="@+id/textInputLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="52dp">
+
+        <EditText
+            android:id="@+id/edit_title"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:hint="@string/edit_title"
+            android:inputType="text" />
+
+        <requestFocus />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/textInputLayout"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textInputLayout2">
+
+        <EditText
+            android:id="@+id/edit_description"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textInputLayout2"
+            android:hint="@string/edit_description"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_view_set"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_above="@+id/item_done"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/dateString"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/dateLabel"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/dateLabel"
+        android:text="@string/date_selected"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@color/lightBlue"
+        android:contentDescription="@string/task_completed"
+        android:gravity="center"
+        android:onClick="cancelOperation"
+        android:text="@string/cancel"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/dateString" />
+
+    <Button
+        android:id="@+id/set_date"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@color/lightBlue"
+        android:text="@string/date_button_set"
+        android:layout_alignBaseline="@+id/cancel"
+        android:layout_alignBottom="@+id/cancel"
+        android:layout_alignStart="@+id/dateString" />
+
+    <Button
+        android:id="@+id/item_done"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@color/lightBlue"
+        android:contentDescription="@string/task_completed"
+        android:gravity="center"
+        android:onClick="sendMessage"
+        android:text="@string/done"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/set_date"
+        android:layout_alignBottom="@+id/set_date"
+        android:layout_alignEnd="@+id/dateString" />
+
+
+</RelativeLayout>
